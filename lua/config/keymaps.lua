@@ -28,3 +28,6 @@ map("v", "<leader>xp", "y'<P'<O<ESC>'>o<ESC>:<C-u>'<,'>!/usr/bin/env bash<CR>", 
 
 map("n", "<leader>e", vim.diagnostic.open_float, "Show diagnostic message")
 map("n", "<leader>q", vim.diagnostic.setloclist, "Populate location list with diagnostics")
+
+map("n", "<C-w>s", "<C-w>s<C-w>p", "Horizontal split")
+map("n", "<C-w>v", "<C-w>v<C-w>p", "Vertical split")
