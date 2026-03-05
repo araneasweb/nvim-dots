@@ -1,39 +1,5 @@
 {
   "nodes": {
-    "gitgraph-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1748879227,
-        "narHash": "sha256-QQcqLUJIligXW9bGQR1sDmg9efNFuTWQGCk7E9ni8Tc=",
-        "owner": "isakbm",
-        "repo": "gitgraph.nvim",
-        "rev": "c16daa7d7dd597caf9085644c009cfa80b75db8e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "isakbm",
-        "ref": "main",
-        "repo": "gitgraph.nvim",
-        "type": "github"
-      }
-    },
-    "layers-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1734880637,
-        "narHash": "sha256-YIqjrAcDWHI6T3PNe9lZ0TgavRlp+8S9Rg6SAY0CVWE=",
-        "owner": "debugloop",
-        "repo": "layers.nvim",
-        "rev": "ebbb386d7aea84a04bf7eab0873975b2e9d695a5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "debugloop",
-        "ref": "main",
-        "repo": "layers.nvim",
-        "type": "github"
-      }
-    },
     "nixCats": {
       "locked": {
         "lastModified": 1767604651,
@@ -65,6 +31,40 @@
         "type": "github"
       }
     },
+    "plugins-gitgraph-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748879227,
+        "narHash": "sha256-QQcqLUJIligXW9bGQR1sDmg9efNFuTWQGCk7E9ni8Tc=",
+        "owner": "isakbm",
+        "repo": "gitgraph.nvim",
+        "rev": "c16daa7d7dd597caf9085644c009cfa80b75db8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "isakbm",
+        "ref": "main",
+        "repo": "gitgraph.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-layers-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734880637,
+        "narHash": "sha256-YIqjrAcDWHI6T3PNe9lZ0TgavRlp+8S9Rg6SAY0CVWE=",
+        "owner": "debugloop",
+        "repo": "layers.nvim",
+        "rev": "ebbb386d7aea84a04bf7eab0873975b2e9d695a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "debugloop",
+        "ref": "main",
+        "repo": "layers.nvim",
+        "type": "github"
+      }
+    },
     "plugins-treesitter-textobjects": {
       "flake": false,
       "locked": {
@@ -84,10 +84,10 @@
     },
     "root": {
       "inputs": {
-        "gitgraph-nvim": "gitgraph-nvim",
-        "layers-nvim": "layers-nvim",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
+        "plugins-gitgraph-nvim": "plugins-gitgraph-nvim",
+        "plugins-layers-nvim": "plugins-layers-nvim",
         "plugins-treesitter-textobjects": "plugins-treesitter-textobjects"
       }
     }
