@@ -4,6 +4,11 @@ local oil = require("oil")
 oil.setup({
 	default_file_explorer = true,
 	columns = { "icon" },
+
+	win_options = {
+		signcolumn = "yes:2",
+	},
+
 	keymaps = {
 		["gd"] = {
 			desc = "Toggle detailed view",
@@ -17,16 +22,14 @@ oil.setup({
 			end,
 		},
 	},
+
 	view_options = {
 		show_hidden = true,
 	},
 })
 
-require("oil-git").setup({
-	show_file_highlights = true,
-	show_directory_highlights = true,
-	show_file_symbols = true,
-	show_directory_symbols = true,
+require("oil-git-status").setup({
+	show_ignored = false,
 })
 
 map("n", "-", oil.open, "Open parent directory")

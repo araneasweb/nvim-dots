@@ -95,7 +95,8 @@
             nvim-treesitter.withAllGrammars
             nvim-web-devicons
             oil-nvim
-            oil-git-nvim
+            # oil-git-nvim
+            oil-git-status-nvim
             plenary-nvim
             rainbow-delimiters-nvim
             telescope-fzf-native-nvim
