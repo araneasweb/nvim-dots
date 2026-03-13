@@ -22,4 +22,11 @@ oil.setup({
 	},
 })
 
+require("oil-git").setup({
+	show_file_highlights = true,
+	show_directory_highlights = true,
+	show_file_symbols = true,
+	show_directory_symbols = true,
+})
+
 map("n", "-", oil.open, "Open parent directory")

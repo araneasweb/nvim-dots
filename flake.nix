@@ -42,6 +42,7 @@
             fourmolu
             gdb
             ghc
+            git
             gofumpt
             golangci-lint
             gopls
@@ -94,6 +95,7 @@
             nvim-treesitter.withAllGrammars
             nvim-web-devicons
             oil-nvim
+            oil-git-nvim
             plenary-nvim
             rainbow-delimiters-nvim
             telescope-fzf-native-nvim
