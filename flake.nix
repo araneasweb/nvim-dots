@@ -47,6 +47,7 @@
             golangci-lint
             gopls
             haskell-language-server
+            lazygit
             lua-language-server
             nil
             nixpkgs-fmt
@@ -80,6 +81,7 @@
             git-conflict-nvim
             gitsigns-nvim
             haskell-tools-nvim
+            lazygit-nvim
             lualine-nvim
             luasnip
             nui-nvim
@@ -95,7 +97,6 @@
             nvim-treesitter.withAllGrammars
             nvim-web-devicons
             oil-nvim
-            # oil-git-nvim
             oil-git-status-nvim
             plenary-nvim
             rainbow-delimiters-nvim

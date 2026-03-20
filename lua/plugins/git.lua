@@ -75,3 +75,5 @@ gitsigns.setup({
 map("n", "<leader>gl", function()
 	require("gitgraph").draw({}, { all = true, max_count = 5000 })
 end, "Draw git graph")
+
+map("n", "<leader>gg", "<cmd>LazyGit<CR>", "Open LazyGit")
