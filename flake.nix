@@ -63,6 +63,8 @@
             tree-sitter
             universal-ctags
             rust-analyzer
+
+            haskellPackages.cornelis
           ];
         };
 
@@ -112,6 +114,10 @@
             vim-sexp-mappings-for-regular-people
             vim-sleuth
             which-key-nvim
+
+            cornelis
+            nvim-hs-vim
+            vim-textobj-user
 
             pkgs.neovimPlugins.gitgraph-nvim
             pkgs.neovimPlugins.layers-nvim
