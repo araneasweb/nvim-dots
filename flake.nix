@@ -49,6 +49,7 @@
             haskell-language-server
             lazygit
             lua-language-server
+            metals
             nil
             nixpkgs-fmt
             nodePackages.prettier
@@ -63,7 +64,6 @@
             tree-sitter
             universal-ctags
             rust-analyzer
-
             haskellPackages.cornelis
           ];
         };
@@ -93,6 +93,7 @@
             nvim-dap-virtual-text
             nvim-lint
             nvim-lspconfig
+            nvim-metals
             nvim-nio
             nvim-notify
             nvim-surround
