@@ -1,9 +1,9 @@
+vim.g.cornelis_use_global_binary = 1
+vim.g.cornelis_agda_prefix = "<Tab>"
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "agda",
 	callback = function(args)
-		vim.g.cornelis_use_global_binary = 1
-		vim.g.cornelis_agda_prefix = "<Tab>"
-
 		local opts = { buffer = args.buf, silent = true }
 		vim.bo[args.buf].commentstring = "-- %s"
 
@@ -17,5 +17,12 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<leader>lad", "<cmd>CornelisGoToDefinition<CR>", opts)
 		vim.keymap.set("n", "la]?", "<cmd>CornelisNextGoal<CR>", opts)
 		vim.keymap.set("n", "la[?", "<cmd>CornelisPrevGoal<CR>", opts)
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*.agda",
+	callback = function()
+		vim.cmd("silent! CornelisLoad")
 	end,
 })
