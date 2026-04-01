@@ -1,6 +1,10 @@
 local map = require("config.util").map
 local conform = require("conform")
 
+vim.filetype.add({
+	extension = { pie = "racket" },
+})
+
 conform.setup({
 	notify_on_error = false,
 	formatters_by_ft = {
