@@ -24,6 +24,8 @@ conform.setup({
 		tex = { "latexindent", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		sh = { "shfmt", stop_after_first = true },
+		bash = { "shfmt", stop_after_first = true },
 	},
 
 	formatters = {
@@ -36,6 +38,9 @@ conform.setup({
 			command = "raco",
 			args = { "fmt", "--width", "80", "--max-blank-lines", "1" },
 			stdin = true,
+		},
+		shfmt = {
+			append_args = { "-i", "2" },
 		},
 	},
 

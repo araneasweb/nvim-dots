@@ -61,6 +61,7 @@
             ripgrep
             rust-analyzer
             selene
+            shfmt
             stylua
             texlab
             tinymist
