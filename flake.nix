@@ -57,7 +57,7 @@
             nodePackages.typescript-language-server
             ormolu
             prettierd
-            racket
+            # racket
             ripgrep
             rust-analyzer
             selene
