@@ -2,11 +2,13 @@ vim.g.cornelis_use_global_binary = 1
 vim.g.cornelis_agda_prefix = "<Tab>"
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "agda",
+	pattern = { "agda", "markdown.agda" },
 	callback = function(args)
 		local opts = { buffer = args.buf, silent = true }
-		vim.bo[args.buf].commentstring = "-- %s"
-
+		local ft = vim.bo[args.buf].filetype
+		if ft == "agda" then
+			vim.bo[args.buf].commentstring = "-- %s"
+		end
 		vim.keymap.set("n", "<leader>lal", "<cmd>CornelisLoad<CR>", opts)
 		vim.keymap.set("n", "<leader>lar", "<cmd>CornelisRefine<CR>", opts)
 		vim.keymap.set("n", "<leader>lac", "<cmd>CornelisMakeCase<CR>", opts)
@@ -21,8 +23,11 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = "*.agda",
-	callback = function()
-		vim.cmd("silent! CornelisLoad")
+	pattern = { "*.agda", "*.lagda", "*.lagda.*", "*.lagda.md" },
+	callback = function(args)
+		local ft = vim.bo[args.buf].filetype
+		if ft == "agda" or ft == "markdown.agda" then
+			vim.cmd("silent! CornelisLoad")
+		end
 	end,
 })
