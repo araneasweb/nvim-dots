@@ -14,7 +14,7 @@ opt.hlsearch = false
 opt.ignorecase = true
 opt.smartcase = true
 opt.inccommand = "split"
-opt.timeoutlen = 300
+opt.timeoutlen = 1200
 opt.updatetime = 300
 opt.undofile = true
 
