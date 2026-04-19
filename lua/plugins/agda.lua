@@ -1,5 +1,5 @@
 vim.g.cornelis_use_global_binary = 1
-vim.g.cornelis_agda_prefix = "<Tab>"
+vim.g.cornelis_agda_prefix = ";"
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "agda", "markdown.agda" },
