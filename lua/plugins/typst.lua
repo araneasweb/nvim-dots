@@ -22,12 +22,12 @@ vim.api.nvim_create_autocmd("FileType", {
 			return root .. "/.typst/" .. name .. ".pdf"
 		end
 
-		util.bufmap(bufnr, "n", "<leader>ltp", "<cmd>TypstPreviewToggle<cr>", "Typst: toggle preview")
-		util.bufmap(bufnr, "n", "<leader>lts", "<cmd>TypstPreviewSyncCursor<cr>", "Typst: sync preview")
-		util.bufmap(bufnr, "n", "<leader>ltf", "<cmd>TypstPreviewFollowCursorToggle<cr>", "Typst: toggle follow cursor")
-		util.bufmap(bufnr, "n", "<leader>lte", "<cmd>LspTinymistExportPdf<cr>", "Typst: export PDF")
+		util.bufmap(bufnr, "n", "<leader>lp", "<cmd>TypstPreviewToggle<cr>", "Typst: toggle preview")
+		util.bufmap(bufnr, "n", "<leader>ls", "<cmd>TypstPreviewSyncCursor<cr>", "Typst: sync preview")
+		util.bufmap(bufnr, "n", "<leader>lf", "<cmd>TypstPreviewFollowCursorToggle<cr>", "Typst: toggle follow cursor")
+		util.bufmap(bufnr, "n", "<leader>le", "<cmd>LspTinymistExportPdf<cr>", "Typst: export PDF")
 
-		util.bufmap(bufnr, "n", "<leader>ltv", function()
+		util.bufmap(bufnr, "n", "<leader>lv", function()
 			vim.fn.jobstart({ "sioyek", pdf_path() }, { detach = true })
 		end, "Typst: open PDF in Sioyek")
 	end,

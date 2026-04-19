@@ -9,16 +9,16 @@ vim.api.nvim_create_autocmd("FileType", {
 		if ft == "agda" then
 			vim.bo[args.buf].commentstring = "-- %s"
 		end
-		vim.keymap.set("n", "<leader>lal", "<cmd>CornelisLoad<CR>", opts)
-		vim.keymap.set("n", "<leader>lar", "<cmd>CornelisRefine<CR>", opts)
-		vim.keymap.set("n", "<leader>lac", "<cmd>CornelisMakeCase<CR>", opts)
-		vim.keymap.set("n", "<leader>lag", "<cmd>CornelisGoals<CR>", opts)
-		vim.keymap.set("n", "<leader>lat", "<cmd>CornelisTypeContext<CR>", opts)
-		vim.keymap.set("n", "<leader>lan", "<cmd>CornelisNormalize<CR>", opts)
-		vim.keymap.set("n", "<leader>las", "<cmd>CornelisSolve<CR>", opts)
-		vim.keymap.set("n", "<leader>lad", "<cmd>CornelisGoToDefinition<CR>", opts)
-		vim.keymap.set("n", "la]?", "<cmd>CornelisNextGoal<CR>", opts)
-		vim.keymap.set("n", "la[?", "<cmd>CornelisPrevGoal<CR>", opts)
+		vim.keymap.set("n", "<leader>ll", "<cmd>CornelisLoad<CR>", opts)
+		vim.keymap.set("n", "<leader>lr", "<cmd>CornelisRefine<CR>", opts)
+		vim.keymap.set("n", "<leader>lc", "<cmd>CornelisMakeCase<CR>", opts)
+		vim.keymap.set("n", "<leader>lg", "<cmd>CornelisGoals<CR>", opts)
+		vim.keymap.set("n", "<leader>lt", "<cmd>CornelisTypeContext<CR>", opts)
+		vim.keymap.set("n", "<leader>ln", "<cmd>CornelisNormalize<CR>", opts)
+		vim.keymap.set("n", "<leader>ls", "<cmd>CornelisSolve<CR>", opts)
+		vim.keymap.set("n", "<leader>ld", "<cmd>CornelisGoToDefinition<CR>", opts)
+		vim.keymap.set("n", "l]?", "<cmd>CornelisNextGoal<CR>", opts)
+		vim.keymap.set("n", "l[?", "<cmd>CornelisPrevGoal<CR>", opts)
 	end,
 })
 
